@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TUGAS 1</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Form Input Data Diri</h1>
+      <form>
+        <label for="name">Nama:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="age">Usia:</label>
+        <input type="number" id="age" name="age" min="1" max="100" required />
+
+        <label for="gender">Jenis Kelamin:</label>
+        <label><input type="radio" name="gender" value="laki-laki" required />Laki-laki</label>
+        <label><input type="radio" name="gender" value="perempuan" />Perempuan</label>
+
+        <label for="hobbies">Hobi:</label>
+        <label><input type="checkbox" name="hobbies" value="berolahraga" />Berolahraga</label>
+        <label><input type="checkbox" name="hobbies" value="membaca" />Membaca</label>
+        <label><input type="checkbox" name="hobbies" value="berkebun" />Berkebun</label>
+
+        <label for="bio">Biografi:</label>
+        <textarea id="bio" name="bio" rows="4" required></textarea>
+
+        <button type="submit">Kirim</button>
+      </form>
+
+      <h2>Data Diri</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Nama</th>
+            <th>Email</th>
+            <th>Usia</th>
+            <th>Jenis Kelamin</th>
+            <th>Hobi</th>
+            <th>Biografi</th>
+          </tr>
+        </thead>
+        <tbody>          <tr>
+            <td>Contoh Nama 1</td>
+            <td>contoh1@email.com</td>
+            <td>25</td>
+            <td>Laki-laki</td>
+            <td>Berolahraga, Membaca</td>
+            <td>Mencintai olahraga dan buku.</td>
+          </tr>
+          <tr>
+            <td>Contoh Nama 2</td>
+            <td>contoh2@email.com</td>
+            <td>30</td>
+            <td>Perempuan</td>
+            <td>Membaca</td>
+            <td>Suka membaca novel dan cerita pendek.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
