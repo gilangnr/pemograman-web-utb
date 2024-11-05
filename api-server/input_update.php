@@ -5,11 +5,12 @@ $nama = $_POST["nama"];
 $jurusan = $_POST["jurusan"];
 $npm = $_POST["npm"];
 
-if(!empty($_POST["id"])) {
+if (!empty($_POST["id"])) {
+    $id = $_POST["id"];
     try {
-        $sql = "UPDATE `mahasiswa` SET `nama` = ?, `jurusan` = ?, `npm` = ? WHERE id = `id`";
+        $sql = "UPDATE `mahasiswa` SET `nama` = ?, `jurusan` = ?, `npm` = ? WHERE `id` = ?";
         $koneksi = $con->prepare($sql);
-        $koneksi->execute([$nama, $jurusan, $npm]);
+        $koneksi->execute([$nama, $jurusan, $npm, $id]);
 
         echo "Data updated successfully";
     } catch (PDOException $err) {
@@ -23,7 +24,7 @@ if(!empty($_POST["id"])) {
 
         echo "Data inserted successfully";
     } catch (PDOException $err) {
-        die("Error insert data: " . $err->getMessage());
+        die("Error inserting data: " . $err->getMessage());
     }
 }
 
