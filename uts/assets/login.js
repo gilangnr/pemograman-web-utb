@@ -5,9 +5,21 @@ document.getElementById("loginForm").addEventListener("submit", function (e) {
   const password = document.getElementById("password").value;
 
   if (email === "user@example.com" && password === "123456") {
-    alert("Login berhasil!");
-    window.location.href = "dashboard.html";
+    Swal.fire({
+      icon: "success",
+      title: "Login Berhasil",
+      text: "Selamat datang kembali!",
+      confirmButtonText: "Lanjutkan",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        window.location.href = "dashboard.html";
+      }
+    });
   } else {
-    alert("Email atau password salah. Silakan coba lagi.");
+    Swal.fire({
+      icon: "error",
+      title: "Login Gagal",
+      text: "Email atau password salah. Silakan coba lagi.",
+    });
   }
 });
