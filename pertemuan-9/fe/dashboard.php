@@ -25,12 +25,7 @@
 
 <body class="bg-light">
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
-        <div class="container">
-            <a class="navbar-brand" href="#">Aplikasi Kami</a>
-            <button class="btn btn-outline-danger" id="logoutButton">Logout</button>
-        </div>
-    </nav>
+    <?php include 'header.php' ?>
 
     <div class="container mt-5">
         <div class="text-center">
